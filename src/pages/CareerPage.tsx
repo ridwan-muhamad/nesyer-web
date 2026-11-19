@@ -20,14 +20,14 @@ interface CareerPosition {
   employmentType: string;
   experience: string;
   status: 'open' | 'closed';
-  postedAt: string;
+  postedAt?: string;
   summary: string;
   responsibilities: string[];
   qualifications: string[];
 }
 
 interface CareerFeed {
-  updatedAt: string;
+  updatedAt?: string;
   applicationEmail: string;
   talentPoolNote: string;
   positions: CareerPosition[];
@@ -35,16 +35,6 @@ interface CareerFeed {
 
 interface CareerPageProps {
   onNavigate: (route: RoutePath) => void;
-}
-
-function formatIndonesianDate(isoDate: string): string {
-  const parsed = new Date(`${isoDate}T00:00:00`);
-  if (Number.isNaN(parsed.getTime())) return isoDate;
-  return parsed.toLocaleDateString('id-ID', {
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric',
-  });
 }
 
 function buildApplicationStrings(positionTitle: string) {
@@ -183,19 +173,15 @@ export function CareerPage({ onNavigate }: CareerPageProps) {
               Bangun Sistem Perbankan & Enterprise Berdampak Bersama Tim Kami
             </h1>
             <p className="text-base sm:text-lg text-slate-300 leading-relaxed">
-              Kami membuka ruang bagi engineer dan profesional operasional IT yang teliti, senang
-              memecahkan tantangan teknis nyata, dan ingin berkontribusi langsung pada proyek
-              integrasi sistem nasional.
+              Kami membuka kesempatan berkarier sekaligus belajar langsung di proyek nyata bagi
+              talenta dan engineer muda yang ingin berkembang, mengasah kemampuan teknis, serta
+              membangun pengalaman di dunia integrasi sistem perbankan dan korporasi.
             </p>
             {data && !loading && (
               <p className="pt-2 text-sm text-slate-300 font-mono tabular-nums">
                 Status Rekrutmen:{' '}
                 <span className="text-white font-semibold">
                   {openCount > 0 ? `${openCount} Posisi Dibuka` : 'Belum Ada Lowongan Dibuka'}
-                </span>
-                {' · '}
-                <span className="text-slate-400">
-                  Diperbarui {formatIndonesianDate(data.updatedAt)}
                 </span>
               </p>
             )}
@@ -365,25 +351,19 @@ export function CareerPage({ onNavigate }: CareerPageProps) {
                   >
                     {/* Role Header */}
                     <div className="p-6 sm:p-8 space-y-4">
-                      <div className="flex flex-wrap items-center justify-between gap-3">
-                        <div className="flex flex-wrap items-center gap-2 text-xs text-slate-500">
-                          <span className="font-mono font-semibold text-blue-700 tabular-nums">
-                            {String(index + 1).padStart(2, '0')}
-                          </span>
-                          <span aria-hidden="true">·</span>
-                          <span className="font-medium text-slate-700">{position.department}</span>
-                          <span aria-hidden="true">·</span>
-                          <span
-                            className={`font-semibold ${
-                              isOpen ? 'text-emerald-700' : 'text-slate-500'
-                            }`}
-                          >
-                            Status: {isOpen ? 'Dibuka' : 'Ditutup'}
-                          </span>
-                        </div>
-
-                        <span className="text-xs font-mono text-slate-500 tabular-nums">
-                          Dipublikasikan {formatIndonesianDate(position.postedAt)}
+                      <div className="flex flex-wrap items-center gap-2 text-xs text-slate-500">
+                        <span className="font-mono font-semibold text-blue-700 tabular-nums">
+                          {String(index + 1).padStart(2, '0')}
+                        </span>
+                        <span aria-hidden="true">·</span>
+                        <span className="font-medium text-slate-700">{position.department}</span>
+                        <span aria-hidden="true">·</span>
+                        <span
+                          className={`font-semibold ${
+                            isOpen ? 'text-emerald-700' : 'text-slate-500'
+                          }`}
+                        >
+                          Status: {isOpen ? 'Dibuka' : 'Ditutup'}
                         </span>
                       </div>
 

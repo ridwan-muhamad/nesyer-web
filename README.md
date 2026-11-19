@@ -14,7 +14,7 @@ Website company profile statis **PT. Nesyer Lintas Teknologi** (Independent Syst
 ## Cara Mengubah Status Rekrutmen (`public/careers.json`)
 1. Buka file `public/careers.json` langsung di repository GitHub Anda lalu klik tombol **Edit**.
 2. Ubah nilai `"status"` pada posisi terkait menjadi `"open"` (dibuka) atau `"closed"` (ditutup), atau tambahkan blok posisi baru di dalam array `"positions"`.
-3. Perbarui tanggal `"updatedAt"` lalu klik **Commit changes**. GitHub Actions akan otomatis menayangkan pembaruan dalam 1-2 menit.
+3. Klik **Commit changes**. GitHub Actions akan otomatis menayangkan pembaruan dalam 1-2 menit.
 
 ## Kesiapan Hosting GitHub Pages
 1. **Relative Asset Paths (`base: './'`)** di `vite.config.ts` sehingga semua berkas JS, CSS, dan gambar termuat normal baik di `https://<username>.github.io/<nama-repo>/` maupun custom domain (`nesyerlintasteknologi.com`).
