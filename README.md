@@ -1,14 +1,14 @@
-# PT. Nesyer Lintas Teknologi — Company Profile Website
+# PT. Nesyer Lintas Teknologi (Company Profile Website)
 
 Website company profile statis **PT. Nesyer Lintas Teknologi** (Independent System Integrator & Solusi Gateway Perbankan), direkonstruksi penuh menggunakan React, TypeScript, Tailwind CSS, dan Vite agar siap di-hosting langsung pada **GitHub Pages**.
 
 ## Struktur Halaman
-- **Home (`#/`)** — Profil ringkas, indikator utama, katalog 5 solusi inti, rekam jejak proyek, dan daftar klien institusi.
-- **About (`#/about`)** — Profil System Integrator independen, filosofi proses bisnis, Visi, Misi, Motto (*"Customer satisfaction is our goal"*), dan tahapan metodologi implementasi.
-- **Service (`#/service`)** — Penjelajah interaktif 5 aplikasi inti: **Middleware RTGS Next G**, **Middleware SKN Gen**, **Middleware System (JSON & ISO 8583)**, **Smart Depo**, dan **Go AML**, lengkap dengan diagram alur arsitektur.
-- **Portofolio (`#/portofolio`)** — Daftar proyek implementasi dengan filter kategori, studi kasus 8 modul Middleware Bank Kalteng (CMS, Samolnas, Taspen, SP2D, Pajak, e-Samsat, Bappenda), serta implementasi Smart Depo di PT. Contindo Raya Padang.
-- **Client (`#/client`)** — Direktori 7 klien institusi (Bank of China Limited Hong Kong, Bank Kalteng, Bank Sulselbar Konvensional & Syariah, Bank Bengkulu, Bank Ina Perdana, dan PT. Contindo Raya Padang) beserta matriks cakupan sistem.
-- **Contact (`#/contact`)** — Alamat Kantor Pusat (Grand Slipi Tower Lt. 42 Unit G-H, Palmerah, Jakarta Barat), telepon `(021) 29222999`, email `support@nesyerlintasteknologi.com`, dan formulir konsultasi tervalidasi yang kompatibel penuh dengan static hosting.
+- **Home (`#/`)**: Profil ringkas, indikator utama, katalog 5 solusi inti, rekam jejak proyek, dan daftar klien institusi.
+- **About (`#/about`)**: Profil System Integrator independen, filosofi proses bisnis, Visi, Misi, Motto (*"Customer satisfaction is our goal"*), dan tahapan metodologi implementasi.
+- **Service (`#/service`)**: Penjelajah interaktif 5 aplikasi inti (**Middleware RTGS Next G**, **Middleware SKN Gen**, **Middleware System (JSON & ISO 8583)**, **Smart Depo**, dan **Go AML**) lengkap dengan diagram alur arsitektur.
+- **Portofolio (`#/portofolio`)**: Daftar proyek implementasi dengan filter kategori, studi kasus 8 modul Middleware Bank Kalteng (CMS, Samolnas, Taspen, SP2D, Pajak, e-Samsat, Bappenda), serta implementasi Smart Depo di PT. Contindo Raya Padang.
+- **Client (`#/client`)**: Direktori 7 klien institusi dengan logo resmi (Bank of China Limited Hong Kong, Bank Kalteng, Bank Sulselbar Konvensional & Syariah, Bank Bengkulu, Bank Ina Perdana, dan PT. Contindo Raya Padang).
+- **Contact (`#/contact`)**: Alamat Kantor Pusat (Grand Slipi Tower Lt. 42 Unit G-H, Palmerah, Jakarta Barat), telepon `(021) 29222999`, email `support@nesyerlintasteknologi.com`, dan formulir konsultasi tervalidasi yang kompatibel penuh dengan static hosting.
 
 ## Kesiapan Hosting GitHub Pages
 1. **Relative Asset Paths (`base: './'`)** di `vite.config.ts` sehingga semua berkas JS, CSS, dan gambar termuat normal baik di `https://<username>.github.io/<nama-repo>/` maupun custom domain (`nesyerlintasteknologi.com`).

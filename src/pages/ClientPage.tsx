@@ -38,9 +38,9 @@ export function ClientPage({ onNavigate }: ClientPageProps) {
               Dipercaya Institusi Perbankan dan Korporasi Terkemuka di Indonesia
             </h1>
             <p className="text-base sm:text-lg text-slate-300 leading-relaxed">
-              Dari bank pembangunan daerah, bank swasta nasional, bank internasional, hingga
-              operator logistik pelabuhan—setiap mitra membuktikan keandalan solusi integrasi dan
-              dukungan penuh dari tim Nesyer.
+              Mulai dari bank pembangunan daerah, bank swasta nasional, bank internasional, hingga
+              operator logistik pelabuhan. Setiap mitra menjadi bukti keandalan solusi integrasi
+              dan dukungan penuh dari tim Nesyer.
             </p>
           </div>
         </div>

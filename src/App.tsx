@@ -26,12 +26,12 @@ function parseHashRoute(): RoutePath {
 }
 
 const PAGE_TITLES: Record<RoutePath, string> = {
-  '/': 'PT. Nesyer Lintas Teknologi — System Integrator & Solusi Gateway Perbankan',
-  '/about': 'About — PT. Nesyer Lintas Teknologi',
-  '/service': 'Service & Aplikasi — PT. Nesyer Lintas Teknologi',
-  '/portofolio': 'Portofolio Implementasi — PT. Nesyer Lintas Teknologi',
-  '/client': 'Klien Institusi — PT. Nesyer Lintas Teknologi',
-  '/contact': 'Hubungi Kami — PT. Nesyer Lintas Teknologi',
+  '/': 'PT. Nesyer Lintas Teknologi | System Integrator & Solusi Gateway Perbankan',
+  '/about': 'About | PT. Nesyer Lintas Teknologi',
+  '/service': 'Service & Aplikasi | PT. Nesyer Lintas Teknologi',
+  '/portofolio': 'Portofolio Implementasi | PT. Nesyer Lintas Teknologi',
+  '/client': 'Klien Institusi | PT. Nesyer Lintas Teknologi',
+  '/contact': 'Hubungi Kami | PT. Nesyer Lintas Teknologi',
 };
 
 export default function App() {

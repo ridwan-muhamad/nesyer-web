@@ -218,7 +218,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
         </div>
       </section>
 
-      {/* Section 3: Adjacent Proof — Project Implementations & Verified Clients */}
+      {/* Section 3: Adjacent Proof (Project Implementations & Verified Clients) */}
       <section className="py-20 bg-slate-50 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
@@ -227,7 +227,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
               <div className="space-y-3">
                 <p className="text-sm font-medium text-blue-700">Bukti Nyata di Lapangan</p>
                 <h2 className="text-3xl font-bold tracking-tight text-navy-900">
-                  Bukan sekadar konsep—telah beroperasi di berbagai bank dan korporasi
+                  Terbukti beroperasi langsung di berbagai bank dan korporasi nasional
                 </h2>
                 <p className="text-slate-600 leading-relaxed">
                   Mulai dari gateway BI-RTGS Gen 2 dan SKN-NG pada bank daerah hingga bank asing,
@@ -347,7 +347,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
               <div className="space-y-5">
                 <p className="text-sm font-medium text-blue-300">Mengapa PT. Nesyer Lintas Teknologi</p>
                 <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-white">
-                  Teknologi yang dirancang mengikuti bisnis Anda—bukan sebaliknya
+                  Teknologi yang dirancang mengikuti kebutuhan bisnis Anda, bukan sebaliknya
                 </h2>
                 <p className="text-slate-300 leading-relaxed">
                   {COMPANY_INFO.aboutParagraphs[1]}

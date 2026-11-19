@@ -35,7 +35,7 @@ export function ServicePage({ initialServiceId, onNavigate }: ServicePageProps) 
               Aplikasi Teruji untuk Mempercepat Operasional Perbankan & Korporasi
             </h1>
             <p className="text-base sm:text-lg text-slate-300 leading-relaxed">
-              Pilih solusi yang paling sesuai dengan tantangan bisnis Anda—mulai dari otomasi
+              Pilih solusi yang paling sesuai dengan tantangan bisnis Anda, mulai dari otomasi
               transaksi Bank Indonesia tanpa token manual, integrasi multi-kanal JSON/ISO 8583,
               pelaporan OJK, hingga digitalisasi kargo pelabuhan.
             </p>

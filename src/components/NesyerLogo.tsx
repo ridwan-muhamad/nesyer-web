@@ -47,12 +47,12 @@ export function NesyerLogo({ className = 'h-8 w-auto', variant = 'light' }: Nesy
         fill={blue}
       />
 
-      {/* Slanted Wing Data Mosaic — Left Column (Teal, Blue, Teal) */}
+      {/* Slanted Wing Data Mosaic: Left Column (Teal, Blue, Teal) */}
       <polygon points="84.5,25.5 102.5,25.5 111,38.5 93,38.5" fill={teal} />
       <polygon points="96,41.5 113.5,41.5 121.5,54 104,54" fill={blue} />
       <polygon points="107,57 124,57 132,68.5 114,66.2" fill={teal} />
 
-      {/* Slanted Wing Data Mosaic — Right Column (Blue, Blue, Teal) */}
+      {/* Slanted Wing Data Mosaic: Right Column (Blue, Blue, Teal) */}
       <polygon points="103,17.5 120.5,17.5 127.5,27.5 110,27.5" fill={blue} />
       <polygon points="112,30.5 129.5,30.5 137.5,43 120,43" fill={blue} />
       <polygon points="123,46 140.5,46 148.5,58.5 131,58.5" fill={teal} />

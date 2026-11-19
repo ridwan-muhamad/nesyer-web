@@ -285,8 +285,8 @@ export function ContactPage() {
                         Jadwalkan Demo atau Konsultasi
                       </h2>
                       <p className="text-sm text-slate-600">
-                        Ceritakan singkat kebutuhan sistem Anda—tim kami akan menyiapkan rekomendasi
-                        arsitektur dan jadwal diskusi terbaik.
+                        Ceritakan singkat kebutuhan sistem Anda, dan tim kami akan menyiapkan
+                        rekomendasi arsitektur beserta jadwal diskusi terbaik.
                       </p>
                     </div>
 

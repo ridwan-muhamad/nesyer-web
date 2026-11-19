@@ -44,14 +44,14 @@ export const COMPANY_INFO = {
     label: 'Kantor Pusat',
     company: 'PT. Nesyer Lintas Teknologi',
     building: 'Gedung Grand Slipi Tower Lt. 42 Unit G-H',
-    street: 'Jl. Letjen S. Parman Kav. 22–24, RT. 001 / RW. 004',
+    street: 'Jl. Letjen S. Parman Kav. 22-24, RT. 001 / RW. 004',
     district: 'Palmerah, Jakarta Barat, DKI Jakarta',
     fullAddress:
-      'Gedung Grand Slipi Tower Lt. 42 Unit G-H, Jl. Letjen S. Parman Kav. 22–24, RT. 001 / RW. 004, Palmerah, Jakarta Barat, DKI Jakarta',
+      'Gedung Grand Slipi Tower Lt. 42 Unit G-H, Jl. Letjen S. Parman Kav. 22-24, RT. 001 / RW. 004, Palmerah, Jakarta Barat, DKI Jakarta',
     phone: '(021) 29222999',
     phoneHref: 'tel:+622129222999',
     email: 'support@nesyerlintasteknologi.com',
-    hours: 'Senin – Jumat, 08.30 – 17.30 WIB',
+    hours: 'Senin - Jumat, 08.30 - 17.30 WIB',
     mapsUrl:
       'https://www.google.com/maps/search/?api=1&query=Grand+Slipi+Tower+Jl.+Letjen+S.+Parman+Kav.+22-24+Palmerah+Jakarta+Barat',
   },
@@ -84,7 +84,7 @@ export const SERVICES: ServiceItem[] = [
     name: 'Middleware RTGS Next G',
     category: 'Banking Gateway',
     shortDescription:
-      'Kirim transaksi RTGS bernilai besar langsung ke STPG Bank Indonesia tanpa repot token BI manual—lebih cepat, aman, dan terekonsiliasi otomatis.',
+      'Kirim transaksi RTGS bernilai besar langsung ke STPG Bank Indonesia tanpa repot token BI manual agar proses lebih cepat, aman, dan terekonsiliasi otomatis.',
     description:
       'Solusi interface perbankan yang menjembatani Core Banking Anda dengan sistem BI-RTGS Gen 2 secara real-time. Dilengkapi fitur unggulan pengiriman pesan langsung ke STPG Bank Indonesia tanpa memakai token BI, sehingga proses setelmen dana bernilai besar berjalan jauh lebih efisien dengan risiko human error yang minimal.',
     protocols: ['BI-RTGS Gen 2', 'STPG BI Direct', 'ISO 20022 / MT', 'Core Banking Host'],
@@ -118,7 +118,7 @@ export const SERVICES: ServiceItem[] = [
     shortDescription:
       'Otomatisasi penuh operasional kliring SKN-NG: mulai dari pengunduhan incoming kredit, debet, dan Bulk Payment hingga pengiriman outgoing.',
     description:
-      'Dirancang khusus untuk menyambungkan Core Banking dengan Sistem Kliring Nasional Bank Indonesia Generasi Baru (SKN-NG). Tim operasional bank tidak lagi direpotkan proses manual—seluruh transaksi incoming kredit, debet, Bulk Payment dari Bank Indonesia maupun outgoing kliring diproses otomatis, cepat, dan tervalidasi.',
+      'Dirancang khusus untuk menyambungkan Core Banking dengan Sistem Kliring Nasional Bank Indonesia Generasi Baru (SKN-NG). Tim operasional bank tidak lagi direpotkan proses manual karena seluruh transaksi incoming kredit, debet, Bulk Payment dari Bank Indonesia, maupun outgoing kliring diproses secara otomatis, cepat, dan tervalidasi.',
     protocols: ['SKN-NG BI', 'Bulk Payment', 'Incoming Kredit & Debet', 'Outgoing Clearing'],
     highlights: [
       'Pengunduhan otomatis transaksi incoming kredit, debet, dan Bulk Payment langsung dari BI.',
@@ -173,7 +173,7 @@ export const SERVICES: ServiceItem[] = [
     name: 'Smart Depo',
     category: 'Logistics System',
     shortDescription:
-      'Kendalikan arus kargo dan kontainer pelabuhan secara real-time—dari gerbang masuk-keluar hingga pelaporan stok depo yang akurat.',
+      'Kendalikan arus kargo dan kontainer pelabuhan secara real-time, mulai dari gerbang masuk-keluar hingga pelaporan stok depo yang akurat.',
     description:
       'Aplikasi manajemen operasional kargo dan peti kemas yang dirancang khusus untuk kebutuhan pelabuhan dan depo logistik di Indonesia. Smart Depo memangkas pencatatan manual di lapangan, mempercepat layanan gate-in/gate-out, serta menyajikan visibilitas stok kontainer secara real-time bagi manajemen.',
     protocols: ['Cargo Tracking', 'Container Inventory', 'Gate In / Gate Out', 'Operational Reporting'],
@@ -241,7 +241,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
     title: 'Implementasi Aplikasi Interface SKN-NG',
     scope: 'Sistem Kliring Nasional Bank Indonesia',
     summary:
-      'Memodernisasi transaksi kliring antarbank dengan menghubungkan Core Banking langsung ke jaringan SKN-NG Bank Indonesia—otomatisasi incoming kredit, debet, Bulk Payment, serta outgoing kliring dalam satu alur yang presisi.',
+      'Memodernisasi transaksi kliring antarbank dengan menghubungkan Core Banking langsung ke jaringan SKN-NG Bank Indonesia, sehingga transaksi incoming kredit, debet, Bulk Payment, dan outgoing kliring berjalan otomatis dalam satu alur yang presisi.',
     clients: [
       'Bank Sulselbar (Konvensional & Syariah)',
       'Bank Kalteng',
