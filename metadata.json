@@ -1,0 +1,6 @@
+{
+  "name": "PT. Nesyer Lintas Teknologi",
+  "description": "Independent System Integrator dan penyedia solusi Teknologi Informasi & Komunikasi (TIK), sistem gateway perbankan (RTGS Next G, SKN-NG, Middleware ISO 8583/JSON), Go AML, serta Smart Depo di Indonesia.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
