@@ -19,6 +19,7 @@ const CATEGORIES: PortfolioCategory[] = [
   'RTGS Gen 2',
   'Middleware',
   'Smart Depo',
+  'Portal & Monitoring',
 ];
 
 export function PortfolioPage({ onNavigate }: PortfolioPageProps) {
@@ -46,8 +47,8 @@ export function PortfolioPage({ onNavigate }: PortfolioPageProps) {
             </h1>
             <p className="text-base sm:text-lg text-slate-300 leading-relaxed">
               Setiap proyek di bawah ini telah melalui pengujian ketat dan beroperasi penuh mendukung
-              transaksi harian bank pembangunan daerah, bank swasta nasional, bank asing, hingga
-              operator depo pelabuhan.
+              transaksi perbankan, integrasi layanan daerah, portal monitoring infrastruktur IT,
+              hingga operasional depo pelabuhan.
             </p>
           </div>
         </div>
@@ -192,8 +193,69 @@ export function PortfolioPage({ onNavigate }: PortfolioPageProps) {
         </div>
       </section>
 
-      {/* Deep Dive Spotlight 2: Smart Depo Logistics Case */}
-      <section className="py-16 lg:py-20 bg-white">
+      {/* Deep Dive Spotlight 2: Portal Informasi & Monitoring System Bank Kalteng */}
+      <section className="py-16 lg:py-20 bg-white border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
+            <div className="lg:col-span-7 flex flex-col justify-center space-y-5">
+              <p className="text-sm font-medium text-blue-700">
+                Studi Kasus Bank Kalteng · Sistem & Infrastruktur IT
+              </p>
+              <h2 className="text-3xl font-bold tracking-tight text-navy-900">
+                Portal Informasi & Monitoring System di Bank Kalteng
+              </h2>
+              <p className="text-slate-600 leading-relaxed">
+                Untuk menjaga keandalan operasional perbankan setiap saat, kami membangun Portal
+                Informasi dan Monitoring System terpusat di Bank Kalteng. Platform ini menyatukan
+                pemantauan sistem, aplikasi bisnis, serta performa infrastruktur server IT dalam
+                satu pusat kendali yang mudah dipantau oleh tim teknis maupun manajemen.
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                <div className="bg-slate-50 border border-slate-200 rounded-lg p-4 space-y-1">
+                  <p className="text-sm font-bold text-navy-900">Monitoring System & Apps</p>
+                  <p className="text-xs text-slate-600 leading-relaxed">
+                    Pantau status aktif, waktu respons, dan kesehatan konektivitas seluruh sistem
+                    serta aplikasi perbankan secara real-time.
+                  </p>
+                </div>
+                <div className="bg-slate-50 border border-slate-200 rounded-lg p-4 space-y-1">
+                  <p className="text-sm font-bold text-navy-900">Pemantauan Infrastruktur Server</p>
+                  <p className="text-xs text-slate-600 leading-relaxed">
+                    Deteksi dini beban CPU, memori, kapasitas disk, dan jaringan lengkap dengan
+                    riwayat performa serta laporan SLA.
+                  </p>
+                </div>
+              </div>
+              <div className="pt-2">
+                <a
+                  href="#/contact"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    onNavigate('/contact');
+                  }}
+                  className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-white bg-blue-700 hover:bg-blue-800 rounded-lg transition-colors whitespace-nowrap shrink-0"
+                >
+                  <span>Konsultasikan Portal Monitoring</span>
+                  <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                </a>
+              </div>
+            </div>
+            <div className="lg:col-span-5">
+              <div className="h-72 lg:h-full min-h-[320px] rounded-xl overflow-hidden border border-slate-200">
+                <ResilientImage
+                  src={IMAGES.bankingGateway}
+                  alt="Infrastruktur server data center Bank Kalteng yang dipantau melalui Portal Informasi dan Monitoring System"
+                  className="w-full h-full object-cover"
+                  fallbackLabel="Portal Informasi & Monitoring System · Bank Kalteng"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Deep Dive Spotlight 3: Smart Depo Logistics Case */}
+      <section className="py-16 lg:py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
             <div className="lg:col-span-5">

@@ -110,7 +110,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
             <div className="max-w-2xl space-y-3">
               <p className="text-sm font-medium text-blue-700">Solusi Unggulan Nesyer</p>
               <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-navy-900">
-                Lima platform siap pakai untuk memodernisasi sistem keuangan & logistik Anda
+                Delapan platform siap pakai untuk sistem perbankan, pengadaan, monitoring IT, dan logistik
               </h2>
             </div>
             <a
@@ -182,7 +182,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
               </div>
             </article>
 
-            {/* Row 2: 3 Complementary Solutions (4 + 4 + 4) */}
+            {/* Row 2 & 3: 6 Complementary Solutions (3 + 3 per row, balanced with zero orphans) */}
             {SERVICES.slice(2).map((service) => (
               <article
                 key={service.id}
@@ -231,8 +231,8 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 </h2>
                 <p className="text-slate-600 leading-relaxed">
                   Mulai dari gateway BI-RTGS Gen 2 dan SKN-NG pada bank daerah hingga bank asing,
-                  delapan integrasi layanan publik Bank Kalteng, sampai digitalisasi depo kontainer
-                  di Padang.
+                  delapan integrasi layanan publik Bank Kalteng, portal informasi dan monitoring
+                  infrastruktur server IT, sampai digitalisasi depo kontainer di Padang.
                 </p>
               </div>
 

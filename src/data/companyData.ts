@@ -3,6 +3,7 @@ import middlewareHubImg from '../assets/images/service_middleware_hub_1795080692
 import bankingGatewayImg from '../assets/images/service_banking_gateway_1795079603320.jpg';
 import goAmlImg from '../assets/images/service_goaml_compliance_1795080690341.jpg';
 import smartDepoOpsImg from '../assets/images/service_port_logistics_ops_1795080692325.jpg';
+import eProcurementImg from '../assets/images/service_eprocurement_1795084140567.jpg';
 
 import logoBoc from '../assets/clients/boc.png';
 import logoKalteng from '../assets/clients/kalteng.jpg';
@@ -20,6 +21,7 @@ export const IMAGES = {
   bankingGateway: bankingGatewayImg,
   goAml: goAmlImg,
   smartDepoOps: smartDepoOpsImg,
+  eProcurement: eProcurementImg,
 };
 
 export const COMPANY_INFO = {
@@ -61,7 +63,13 @@ export interface ServiceItem {
   id: string;
   number: string;
   name: string;
-  category: 'Banking Gateway' | 'Enterprise Integration' | 'Logistics System' | 'Regulatory Compliance';
+  category:
+    | 'Banking Gateway'
+    | 'Enterprise Integration'
+    | 'Logistics System'
+    | 'Regulatory Compliance'
+    | 'IT Monitoring & Operations'
+    | 'Enterprise Management';
   shortDescription: string;
   description: string;
   protocols: string[];
@@ -219,9 +227,93 @@ export const SERVICES: ServiceItem[] = [
     imageAlt: 'Tim kepatuhan perbankan menganalisis pelaporan transaksi keuangan Go AML ke OJK',
     deployedAt: ['Solusi Kepatuhan Sektor Perbankan Nasional'],
   },
+  {
+    id: 'portal-monitoring',
+    number: '06',
+    name: 'Portal Informasi & Monitoring System',
+    category: 'IT Monitoring & Operations',
+    shortDescription:
+      'Pantau kesehatan seluruh aplikasi bisnis, layanan sistem, dan infrastruktur server IT secara real-time dalam satu portal terpadu lengkap dengan peringatan dini.',
+    description:
+      'Solusi portal informasi dan monitoring terpusat untuk membantu tim IT serta manajemen memantau status operasional aplikasi, konektivitas layanan, dan performa infrastruktur server secara real-time. Membantu deteksi gangguan lebih awal sekaligus menyediakan laporan ketersediaan dan SLA yang terukur.',
+    protocols: ['System & Apps Monitoring', 'Server Infrastructure', 'Early Warning Alert', 'SLA Reporting'],
+    highlights: [
+      'Dashboard portal terpusat untuk memantau status aktif seluruh sistem, aplikasi bisnis, dan layanan inti.',
+      'Pemantauan real-time utilisasi infrastruktur server IT meliputi CPU, memori, kapasitas storage, dan jaringan.',
+      'Peringatan dini otomatis (early warning & alerting) agar kendala teknis cepat ditangani sebelum berdampak ke pengguna.',
+      'Rekapitulasi histori performa serta ketersediaan layanan untuk kebutuhan evaluasi SLA manajemen.',
+    ],
+    flow: {
+      source: 'Aplikasi & Server IT',
+      middleware: 'Nesyer Monitoring Engine',
+      destination: 'Portal Dashboard & Alerting',
+      protocolLabel: 'Monitoring Real-Time · Early Warning · SLA Report',
+    },
+    image: bankingGatewayImg,
+    imageAlt: 'Infrastruktur server data center enterprise yang dipantau melalui Portal Informasi dan Monitoring System',
+    deployedAt: ['Bank Kalteng'],
+  },
+  {
+    id: 'e-procurement',
+    number: '07',
+    name: 'Aplikasi e-Procurement',
+    category: 'Enterprise Management',
+    shortDescription:
+      'Kelola pengadaan serta seluruh proyek baru dan berjalan dalam satu platform terpadu, mulai dari pengajuan kebutuhan, anggaran, pemilihan vendor, hingga dashboard progres dan realisasi biaya.',
+    description:
+      'Aplikasi e-Procurement merupakan sistem terintegrasi untuk mengelola pengadaan serta seluruh proyek baru dan proyek yang sedang berjalan dalam satu platform. Sistem mencatat seluruh alur sejak pengajuan kebutuhan, persetujuan anggaran, pemilihan vendor, pelaksanaan pekerjaan, pembayaran, pemeliharaan, hingga evaluasi. Setiap proyek dilengkapi data, dokumen, jadwal, anggaran, penanggung jawab, serta riwayat aktivitas yang dapat dipantau sesuai kewenangan pengguna.',
+    protocols: ['End-to-End Procurement', 'Project & Budget Control', 'Role-Based Access', 'Executive Dashboard'],
+    highlights: [
+      'Mengelola siklus lengkap mulai dari pengajuan kebutuhan, persetujuan anggaran, pemilihan vendor, pelaksanaan pekerjaan, hingga pembayaran, pemeliharaan, dan evaluasi.',
+      'Sentralisasi data, dokumen, jadwal, anggaran, penanggung jawab, serta riwayat aktivitas proyek dengan pengaturan hak akses sesuai kewenangan pengguna.',
+      'Dashboard eksekutif terpadu yang menampilkan seluruh proyek beserta status, progres pengerjaan, nilai anggaran, realisasi biaya, vendor, dan jadwal penyelesaian.',
+      'Mempercepat koordinasi lintas unit serta menjaga transparansi dan akuntabilitas setiap tahapan pengadaan perusahaan.',
+    ],
+    flow: {
+      source: 'Pengajuan, Anggaran & Vendor',
+      middleware: 'Aplikasi e-Procurement',
+      destination: 'Dashboard Proyek & Evaluasi',
+      protocolLabel: 'Pengadaan · Realisasi Biaya · Hak Akses Pengguna',
+    },
+    image: eProcurementImg,
+    imageAlt: 'Eksekutif meninjau dashboard progres proyek, nilai anggaran, realisasi biaya, dan jadwal vendor pada Aplikasi e-Procurement',
+    deployedAt: ['Solusi Pengadaan & Manajemen Proyek Korporasi dan Perbankan'],
+  },
+  {
+    id: 'api-bi-fast',
+    number: '08',
+    name: 'API BI-FAST',
+    category: 'Banking Gateway',
+    shortDescription:
+      'Hubungkan kanal CMS, Mobile Banking, Teller, dan berbagai delivery channel lainnya ke jaringan BI-FAST Bank Indonesia dengan keamanan kriptografi berbasis HSM.',
+    description:
+      'Solusi API Gateway BI-FAST yang dibangun untuk menyambungkan berbagai kanal transaksi bank, mulai dari Cash Management System (CMS), Mobile Banking, Teller, hingga channel layanan lainnya agar dapat terhubung langsung ke API BI-FAST Bank Indonesia. Seluruh jalur komunikasi dan autentikasi transaksi diamankan menggunakan Hardware Security Module (HSM) sesuai standar keamanan perbankan nasional.',
+    protocols: ['BI-FAST API', 'HSM Security', 'ISO 20022 / JSON', 'Multi-Channel Bridge'],
+    highlights: [
+      'Menghubungkan kanal Cash Management System (CMS), Mobile Banking, Teller, dan delivery channel bank lainnya secara terpusat ke API BI-FAST.',
+      'Koneksi keamanan transaksi menggunakan Hardware Security Module (HSM) untuk enkripsi, manajemen kunci, dan integritas pesan sesuai ketentuan BI.',
+      'Mendukung pemrosesan transfer antarbank real-time 24/7 dengan validasi otomatis, latensi rendah, dan jejak audit menyeluruh.',
+      'Arsitektur API yang mudah diperluas sehingga penambahan kanal digital baru tidak perlu membangun ulang konektor BI-FAST.',
+    ],
+    flow: {
+      source: 'CMS · Mobile Banking · Teller',
+      middleware: 'Nesyer API BI-FAST (HSM)',
+      destination: 'API BI-FAST Bank Indonesia',
+      protocolLabel: 'Multi-Channel API · Keamanan Kriptografi HSM',
+    },
+    image: middlewareHubImg,
+    imageAlt: 'Ilustrasi arsitektur hub API BI-FAST multi-kanal dengan pengamanan Hardware Security Module (HSM)',
+    deployedAt: ['Solusi Gateway Pembayaran Real-Time 24/7 Perbankan Nasional'],
+  },
 ];
 
-export type PortfolioCategory = 'Semua' | 'SKN-NG' | 'RTGS Gen 2' | 'Middleware' | 'Smart Depo';
+export type PortfolioCategory =
+  | 'Semua'
+  | 'SKN-NG'
+  | 'RTGS Gen 2'
+  | 'Middleware'
+  | 'Smart Depo'
+  | 'Portal & Monitoring';
 
 export interface PortfolioProject {
   id: string;
@@ -310,6 +402,22 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
     ],
     protocols: ['Smart Depo Engine', 'Port Cargo Management', 'Inventory Control'],
   },
+  {
+    id: 'proj-portal-monitoring',
+    category: 'Portal & Monitoring',
+    title: 'Implementasi Portal Informasi & Monitoring System Bank Kalteng',
+    scope: 'Monitoring Aplikasi, Layanan & Infrastruktur Server IT',
+    summary:
+      'Membangun Portal Informasi dan Monitoring System terpusat di Bank Kalteng untuk memantau kesehatan sistem, aplikasi bisnis, layanan operasional, serta performa infrastruktur server IT secara real-time agar tim IT dapat mendeteksi dan menangani potensi gangguan sejak dini.',
+    clients: ['Bank Kalteng'],
+    deliverables: [
+      'Portal informasi terpusat untuk memantau status operasional seluruh sistem dan aplikasi bank',
+      'Pemantauan real-time utilisasi infrastruktur server IT (CPU, memori, storage, dan jaringan)',
+      'Peringatan dini gangguan otomatis (early warning & alerting) bagi tim operasional IT',
+      'Rekapitulasi histori performa dan ketersediaan layanan untuk evaluasi SLA manajemen',
+    ],
+    protocols: ['System & Apps Monitoring', 'Server Infrastructure', 'Alerting & SLA Report'],
+  },
 ];
 
 export const BANK_KALTENG_MIDDLEWARE_MODULES = [
@@ -362,9 +470,10 @@ export const CLIENTS: ClientProfile[] = [
       'Interface SKN-NG',
       'Interface RTGS Gen 2',
       'Enterprise Middleware (CMS, Samolnas, Taspen, SP2D, Pajak, e-Samsat, Bappenda)',
+      'Portal Informasi & Monitoring System',
     ],
     summary:
-      'Kemitraan jangka panjang mencakup gerbang pembayaran Bank Indonesia serta 8 modul middleware strategis yang menghubungkan Core Banking dengan layanan keuangan daerah.',
+      'Kemitraan strategis jangka panjang mencakup gerbang pembayaran Bank Indonesia, 8 modul middleware layanan daerah, serta Portal Informasi & Monitoring System untuk aplikasi dan infrastruktur server IT.',
   },
   {
     id: 'bank-sulselbar',
@@ -430,7 +539,7 @@ export const CLIENTS: ClientProfile[] = [
 
 export const KEY_METRICS = [
   { value: '7+', label: 'Institusi Perbankan & Korporasi', detail: 'Dipercaya BPD, bank swasta nasional, bank asing, hingga logistik pelabuhan' },
-  { value: '5', label: 'Solusi Aplikasi Siap Pakai', detail: 'RTGS Next G, SKN Gen, Middleware ISO 8583/JSON, Smart Depo & Go AML' },
+  { value: '8', label: 'Solusi Aplikasi Siap Pakai', detail: 'RTGS Next G, SKN Gen, API BI-FAST, Middleware, Smart Depo, Go AML, Portal Monitoring & e-Procurement' },
   { value: '8+', label: 'Kanal Layanan Terintegrasi', detail: 'CMS, SP2D, Samolnas, e-Samsat, Taspen, Pajak & Bappenda dalam satu hub' },
   { value: '0 Token', label: 'Pengiriman Langsung STPG BI', detail: 'Otomatisasi transaksi RTGS langsung ke STPG Bank Indonesia tanpa token manual' },
 ];

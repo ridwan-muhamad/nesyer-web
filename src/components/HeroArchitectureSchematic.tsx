@@ -43,6 +43,17 @@ const PATHWAYS: PathwaySpec[] = [
     outcome: 'Pengunduhan transaksi masuk dan pengiriman kliring keluar berjalan tanpa proses manual.',
   },
   {
+    id: 'bifast',
+    label: 'API BI-FAST',
+    serviceId: 'api-bi-fast',
+    source: 'CMS, Mobile Banking & Teller',
+    sourceSub: 'Multi-Channel Delivery Bank',
+    protocol: 'BI-FAST API · Keamanan HSM',
+    target: 'API BI-FAST Bank Indonesia',
+    targetSub: 'Transfer Real-Time 24/7 Berkeamanan HSM',
+    outcome: 'Menyambungkan seluruh kanal layanan bank ke jaringan BI-FAST dengan enkripsi Hardware Security Module.',
+  },
+  {
     id: 'middleware',
     label: 'Middleware Hub',
     serviceId: 'middleware-system',
@@ -52,17 +63,6 @@ const PATHWAYS: PathwaySpec[] = [
     target: 'Layanan Publik & Daerah',
     targetSub: 'SP2D · Samolnas · e-Samsat · Taspen · Pajak · Bappenda',
     outcome: 'Menyatukan beragam kanal layanan pemerintah dan korporasi dalam satu gerbang terpadu.',
-  },
-  {
-    id: 'goaml',
-    label: 'Go AML',
-    serviceId: 'go-aml',
-    source: 'Data Transaksi Bank',
-    sourceSub: 'Ekstraksi & Validasi Terstruktur',
-    protocol: 'OJK Standard · Audit Trail',
-    target: 'Pelaporan OJK',
-    targetSub: 'Kepatuhan Anti-Money Laundering',
-    outcome: 'Memastikan pelaporan transaksi keuangan ke regulator tepat waktu dan lolos validasi skema.',
   },
 ];
 

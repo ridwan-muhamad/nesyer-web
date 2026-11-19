@@ -36,8 +36,9 @@ export function ServicePage({ initialServiceId, onNavigate }: ServicePageProps) 
             </h1>
             <p className="text-base sm:text-lg text-slate-300 leading-relaxed">
               Pilih solusi yang paling sesuai dengan tantangan bisnis Anda, mulai dari otomasi
-              transaksi Bank Indonesia tanpa token manual, integrasi multi-kanal JSON/ISO 8583,
-              pelaporan OJK, hingga digitalisasi kargo pelabuhan.
+              RTGS dan SKN-NG Bank Indonesia, API BI-FAST multi-kanal berkeamanan HSM, integrasi
+              JSON/ISO 8583, pelaporan OJK, monitoring aplikasi dan server IT, e-Procurement, hingga
+              digitalisasi kargo pelabuhan.
             </p>
           </div>
         </div>
