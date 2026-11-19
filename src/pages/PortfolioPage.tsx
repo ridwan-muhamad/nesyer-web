@@ -243,8 +243,8 @@ export function PortfolioPage({ onNavigate }: PortfolioPageProps) {
             <div className="lg:col-span-5">
               <div className="h-72 lg:h-full min-h-[320px] rounded-xl overflow-hidden border border-slate-200">
                 <ResilientImage
-                  src={IMAGES.bankingGateway}
-                  alt="Infrastruktur server data center Bank Kalteng yang dipantau melalui Portal Informasi dan Monitoring System"
+                  src={IMAGES.itMonitoringNoc}
+                  alt="Tim operasional IT Bank Kalteng memantau kesehatan aplikasi dan server melalui Portal Informasi dan Monitoring System"
                   className="w-full h-full object-cover"
                   fallbackLabel="Portal Informasi & Monitoring System · Bank Kalteng"
                 />

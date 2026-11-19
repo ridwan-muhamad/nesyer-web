@@ -1,9 +1,12 @@
 import aboutTeamImg from '../assets/images/about_analysts_team_1795080691703.jpg';
+import rtgsSettlementImg from '../assets/images/service_rtgs_settlement_1795085118877.jpg';
+import sknClearingImg from '../assets/images/service_skn_clearing_1795085120989.jpg';
 import middlewareHubImg from '../assets/images/service_middleware_hub_1795080692364.jpg';
-import bankingGatewayImg from '../assets/images/service_banking_gateway_1795079603320.jpg';
-import goAmlImg from '../assets/images/service_goaml_compliance_1795080690341.jpg';
 import smartDepoOpsImg from '../assets/images/service_port_logistics_ops_1795080692325.jpg';
+import goAmlImg from '../assets/images/service_goaml_compliance_1795080690341.jpg';
+import itMonitoringNocImg from '../assets/images/service_it_monitoring_noc_1795085121068.jpg';
 import eProcurementImg from '../assets/images/service_eprocurement_1795084140567.jpg';
+import biFastHsmImg from '../assets/images/service_bifast_hsm_1795085121707.jpg';
 
 import logoBoc from '../assets/clients/boc.png';
 import logoKalteng from '../assets/clients/kalteng.jpg';
@@ -17,11 +20,14 @@ export type RoutePath = '/' | '/about' | '/service' | '/portofolio' | '/client' 
 
 export const IMAGES = {
   aboutTeam: aboutTeamImg,
+  rtgsSettlement: rtgsSettlementImg,
+  sknClearing: sknClearingImg,
   middlewareHub: middlewareHubImg,
-  bankingGateway: bankingGatewayImg,
-  goAml: goAmlImg,
   smartDepoOps: smartDepoOpsImg,
+  goAml: goAmlImg,
+  itMonitoringNoc: itMonitoringNocImg,
   eProcurement: eProcurementImg,
+  biFastHsm: biFastHsmImg,
 };
 
 export const COMPANY_INFO = {
@@ -108,8 +114,8 @@ export const SERVICES: ServiceItem[] = [
       destination: 'STPG / BI-RTGS Gen 2',
       protocolLabel: 'Direct STPG · Tanpa Token BI Manual',
     },
-    image: middlewareHubImg,
-    imageAlt: 'Ilustrasi arsitektur middleware dan gateway transaksi perbankan RTGS Next G',
+    image: rtgsSettlementImg,
+    imageAlt: 'Ilustrasi jalur setelmen antarbank real-time berkecepatan tinggi Middleware RTGS Next G',
     deployedAt: [
       'Bank Sulselbar (Konvensional & Syariah)',
       'Bank Kalteng',
@@ -140,8 +146,8 @@ export const SERVICES: ServiceItem[] = [
       destination: 'SKN-NG Bank Indonesia',
       protocolLabel: 'Incoming Kredit/Debet · Bulk Payment · Outgoing',
     },
-    image: bankingGatewayImg,
-    imageAlt: 'Infrastruktur server perbankan untuk otomasi kliring nasional SKN-NG',
+    image: sknClearingImg,
+    imageAlt: 'Ilustrasi alur pemrosesan kliring nasional dan bulk payment otomatis Middleware SKN Gen',
     deployedAt: [
       'Bank Sulselbar (Konvensional & Syariah)',
       'Bank Kalteng',
@@ -249,8 +255,8 @@ export const SERVICES: ServiceItem[] = [
       destination: 'Portal Dashboard & Alerting',
       protocolLabel: 'Monitoring Real-Time · Early Warning · SLA Report',
     },
-    image: bankingGatewayImg,
-    imageAlt: 'Infrastruktur server data center enterprise yang dipantau melalui Portal Informasi dan Monitoring System',
+    image: itMonitoringNocImg,
+    imageAlt: 'Tim operasional IT memantau layar dashboard kesehatan aplikasi dan infrastruktur server pada Portal Informasi & Monitoring System',
     deployedAt: ['Bank Kalteng'],
   },
   {
@@ -301,8 +307,8 @@ export const SERVICES: ServiceItem[] = [
       destination: 'API BI-FAST Bank Indonesia',
       protocolLabel: 'Multi-Channel API · Keamanan Kriptografi HSM',
     },
-    image: middlewareHubImg,
-    imageAlt: 'Ilustrasi arsitektur hub API BI-FAST multi-kanal dengan pengamanan Hardware Security Module (HSM)',
+    image: biFastHsmImg,
+    imageAlt: 'Ilustrasi gateway API BI-FAST yang menghubungkan Mobile Banking, CMS, dan Teller melalui kriptografi Hardware Security Module (HSM)',
     deployedAt: ['Solusi Gateway Pembayaran Real-Time 24/7 Perbankan Nasional'],
   },
 ];
