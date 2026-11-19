@@ -63,11 +63,32 @@ export function ContactPage() {
     setSubmitted(true);
   };
 
+  const emailSubject = `[Konsultasi ${form.solution}] ${form.company || 'Perusahaan'}`;
+  const emailBody = [
+    `Halo Tim PT. Nesyer Lintas Teknologi,`,
+    '',
+    `Berikut detail permintaan konsultasi kami:`,
+    `Nama: ${form.name}`,
+    `Institusi/Perusahaan: ${form.company}`,
+    `Email: ${form.email}`,
+    `Telepon/WhatsApp: ${form.phone}`,
+    `Solusi yang Diminati: ${form.solution}`,
+    '',
+    `Kebutuhan Proyek:`,
+    form.message,
+  ].join('\n');
+
+  const gmailWebHref = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
+    COMPANY_INFO.headOffice.email
+  )}&su=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+
   const mailtoHref = `mailto:${COMPANY_INFO.headOffice.email}?subject=${encodeURIComponent(
-    `[Konsultasi ${form.solution}] ${form.company || 'Perusahaan'}`
-  )}&body=${encodeURIComponent(
-    `Nama: ${form.name}\nInstitusi/Perusahaan: ${form.company}\nEmail: ${form.email}\nTelepon: ${form.phone}\nSolusi: ${form.solution}\n\nPesan:\n${form.message}`
-  )}`;
+    emailSubject
+  )}&body=${encodeURIComponent(emailBody)}`;
+
+  const directGmailHref = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
+    COMPANY_INFO.headOffice.email
+  )}&su=${encodeURIComponent('Permintaan Informasi Solusi IT - PT. Nesyer Lintas Teknologi')}`;
 
   return (
     <div>
@@ -85,9 +106,9 @@ export function ContactPage() {
               Mari Wujudkan Integrasi Sistem yang Lebih Cepat & Andal
             </h1>
             <p className="text-base sm:text-lg text-slate-300 leading-relaxed">
-              Punya rencana implementasi RTGS Next G, SKN-NG, Middleware ISO 8583/JSON, Go AML,
-              atau Smart Depo? Tim analis bisnis dan engineer kami siap berdiskusi langsung dengan
-              Anda.
+              Punya rencana implementasi RTGS Next G, SKN-NG, API BI-FAST, Middleware, Go AML,
+              Portal Monitoring, e-Procurement, atau Smart Depo? Tim analis bisnis dan engineer
+              kami siap berdiskusi langsung dengan Anda.
             </p>
           </div>
         </div>
@@ -197,6 +218,17 @@ export function ContactPage() {
                     <p className="text-xs text-slate-500">
                       Permintaan demo, penawaran proyek, dan dukungan teknis
                     </p>
+                    <div className="pt-1.5 flex flex-wrap items-center gap-4">
+                      <a
+                        href={directGmailHref}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-xs font-medium text-blue-700 hover:text-blue-800 whitespace-nowrap"
+                      >
+                        <span>Tulis di Gmail Web</span>
+                        <ExternalLink className="w-3.5 h-3.5" aria-hidden="true" />
+                      </a>
+                    </div>
                   </div>
                   <button
                     type="button"
@@ -224,22 +256,25 @@ export function ContactPage() {
                     </div>
                     <div className="space-y-2">
                       <h2 className="text-2xl font-bold text-navy-900">
-                        Permintaan Konsultasi Siap Dikirim
+                        Draft Email Konsultasi Siap Dikirim
                       </h2>
                       <p className="text-sm text-slate-600 leading-relaxed">
                         Terima kasih, <span className="font-semibold text-navy-900">{form.name}</span>{' '}
                         dari <span className="font-semibold text-navy-900">{form.company}</span>.
-                        Klik tombol di bawah untuk langsung mengirim ringkasan kebutuhan{' '}
-                        <span className="font-semibold text-navy-900">{form.solution}</span> ke
-                        tim resmi kami di{' '}
+                        Klik <span className="font-semibold text-navy-900">Kirim via Gmail Web</span>{' '}
+                        di bawah untuk membuka tab Gmail dengan alamat tujuan{' '}
                         <span className="font-mono text-navy-900">
                           {COMPANY_INFO.headOffice.email}
                         </span>
-                        .
+                        , subjek, dan isi pesan yang sudah terisi otomatis.
                       </p>
                     </div>
 
                     <div className="bg-white border border-slate-200 rounded-lg p-5 text-sm space-y-2">
+                      <p>
+                        <span className="text-slate-500">Subjek:</span>{' '}
+                        <span className="font-medium text-navy-900">{emailSubject}</span>
+                      </p>
                       <p>
                         <span className="text-slate-500">Solusi:</span>{' '}
                         <span className="font-medium text-navy-900">{form.solution}</span>
@@ -257,25 +292,68 @@ export function ContactPage() {
                       </p>
                     </div>
 
-                    <div className="flex flex-wrap items-center gap-3">
-                      <a
-                        href={mailtoHref}
-                        className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-white bg-blue-700 hover:bg-blue-800 rounded-lg transition-colors whitespace-nowrap"
-                      >
-                        <Send className="w-4 h-4" aria-hidden="true" />
-                        <span>Kirim via Email Resmi</span>
-                      </a>
-                      <button
-                        type="button"
-                        onClick={() => {
-                          setForm(INITIAL_FORM);
-                          setErrors({});
-                          setSubmitted(false);
-                        }}
-                        className="px-4 py-2.5 text-sm font-medium text-slate-700 bg-white border border-slate-300 hover:bg-slate-100 rounded-lg transition-colors whitespace-nowrap"
-                      >
-                        Buat Pesan Baru
-                      </button>
+                    <div className="space-y-4">
+                      <div className="flex flex-wrap items-center gap-3">
+                        <a
+                          href={gmailWebHref}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-white bg-blue-700 hover:bg-blue-800 rounded-lg transition-colors whitespace-nowrap focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700"
+                        >
+                          <Send className="w-4 h-4" aria-hidden="true" />
+                          <span>Kirim via Gmail Web</span>
+                          <ExternalLink className="w-3.5 h-3.5 opacity-80" aria-hidden="true" />
+                        </a>
+
+                        <a
+                          href={mailtoHref}
+                          className="inline-flex items-center gap-2 px-4 py-2.5 text-sm font-medium text-navy-900 bg-white border border-slate-300 hover:bg-slate-100 rounded-lg transition-colors whitespace-nowrap"
+                        >
+                          <Mail className="w-4 h-4 text-blue-700" aria-hidden="true" />
+                          <span>Buka Aplikasi Email</span>
+                        </a>
+
+                        <button
+                          type="button"
+                          onClick={() =>
+                            handleCopy('message', `Subjek: ${emailSubject}\n\n${emailBody}`)
+                          }
+                          className="inline-flex items-center gap-2 px-4 py-2.5 text-sm font-medium text-slate-700 bg-white border border-slate-300 hover:bg-slate-100 rounded-lg transition-colors whitespace-nowrap"
+                        >
+                          {copiedField === 'message' ? (
+                            <>
+                              <Check className="w-4 h-4 text-blue-700" aria-hidden="true" />
+                              <span>Isi Pesan Disalin</span>
+                            </>
+                          ) : (
+                            <>
+                              <Copy className="w-4 h-4" aria-hidden="true" />
+                              <span>Salin Isi Pesan</span>
+                            </>
+                          )}
+                        </button>
+                      </div>
+
+                      <div className="pt-2 border-t border-slate-200 flex flex-wrap items-center gap-5 text-xs">
+                        <button
+                          type="button"
+                          onClick={() => setSubmitted(false)}
+                          className="font-medium text-blue-700 hover:text-blue-800 transition-colors"
+                        >
+                          Ubah Data Form
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setForm(INITIAL_FORM);
+                            setErrors({});
+                            setSubmitted(false);
+                          }}
+                          className="font-medium text-slate-600 hover:text-navy-900 transition-colors"
+                        >
+                          Buat Pesan Baru
+                        </button>
+                      </div>
                     </div>
                   </div>
                 ) : (
@@ -425,7 +503,7 @@ export function ContactPage() {
 
                     <div className="pt-2 flex flex-wrap items-center justify-between gap-4">
                       <p className="text-xs text-slate-500">
-                        Butuh respons cepat? Hubungi{' '}
+                        Dapat langsung dikirim lewat Gmail Web atau hubungi{' '}
                         <span className="font-mono text-slate-700">
                           {COMPANY_INFO.headOffice.phone}
                         </span>
@@ -435,7 +513,7 @@ export function ContactPage() {
                         className="inline-flex items-center gap-2 px-6 py-2.5 text-sm font-semibold text-white bg-blue-700 hover:bg-blue-800 rounded-lg transition-colors whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700"
                       >
                         <Send className="w-4 h-4" aria-hidden="true" />
-                        <span>Kirim Permintaan Konsultasi</span>
+                        <span>Siapkan & Kirim Pesan</span>
                       </button>
                     </div>
                   </form>
