@@ -16,7 +16,14 @@ import logoSulselbarSyariah from '../assets/clients/sulselbar-syariah.png';
 import logoBengkulu from '../assets/clients/bengkulu.png';
 import logoIna from '../assets/clients/ina.png';
 
-export type RoutePath = '/' | '/about' | '/service' | '/portofolio' | '/client' | '/contact';
+export type RoutePath =
+  | '/'
+  | '/about'
+  | '/service'
+  | '/portofolio'
+  | '/client'
+  | '/contact'
+  | '/career';
 
 export const IMAGES = {
   aboutTeam: aboutTeamImg,

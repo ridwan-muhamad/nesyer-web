@@ -43,6 +43,7 @@ export function Footer({ onNavigate }: FooterProps) {
                 { label: 'Service', path: '/service' as RoutePath },
                 { label: 'Portofolio', path: '/portofolio' as RoutePath },
                 { label: 'Client', path: '/client' as RoutePath },
+                { label: 'Karier', path: '/career' as RoutePath },
                 { label: 'Contact', path: '/contact' as RoutePath },
               ].map((link) => (
                 <li key={link.path}>

@@ -7,6 +7,7 @@ import { ServicePage } from './pages/ServicePage';
 import { PortfolioPage } from './pages/PortfolioPage';
 import { ClientPage } from './pages/ClientPage';
 import { ContactPage } from './pages/ContactPage';
+import { CareerPage } from './pages/CareerPage';
 import type { RoutePath } from './data/companyData';
 
 const VALID_ROUTES: RoutePath[] = [
@@ -16,6 +17,7 @@ const VALID_ROUTES: RoutePath[] = [
   '/portofolio',
   '/client',
   '/contact',
+  '/career',
 ];
 
 function parseHashRoute(): RoutePath {
@@ -32,6 +34,7 @@ const PAGE_TITLES: Record<RoutePath, string> = {
   '/portofolio': 'Portofolio Implementasi | PT. Nesyer Lintas Teknologi',
   '/client': 'Klien Institusi | PT. Nesyer Lintas Teknologi',
   '/contact': 'Hubungi Kami | PT. Nesyer Lintas Teknologi',
+  '/career': 'Karier & Rekrutmen | PT. Nesyer Lintas Teknologi',
 };
 
 export default function App() {
@@ -81,6 +84,7 @@ export default function App() {
         {currentRoute === '/portofolio' && <PortfolioPage onNavigate={navigate} />}
         {currentRoute === '/client' && <ClientPage onNavigate={navigate} />}
         {currentRoute === '/contact' && <ContactPage />}
+        {currentRoute === '/career' && <CareerPage onNavigate={navigate} />}
       </main>
 
       <Footer onNavigate={(route) => navigate(route)} />

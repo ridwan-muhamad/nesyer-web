@@ -8,7 +8,13 @@ Website company profile statis **PT. Nesyer Lintas Teknologi** (Independent Syst
 - **Service (`#/service`)**: Penjelajah interaktif 8 aplikasi inti (**Middleware RTGS Next G**, **Middleware SKN Gen**, **Middleware System (JSON & ISO 8583)**, **Smart Depo**, **Go AML**, **Portal Informasi & Monitoring System**, **Aplikasi e-Procurement**, dan **API BI-FAST**) lengkap dengan diagram alur arsitektur.
 - **Portofolio (`#/portofolio`)**: Daftar proyek implementasi dengan filter kategori, studi kasus 8 modul Middleware Bank Kalteng (CMS, Samolnas, Taspen, SP2D, Pajak, e-Samsat, Bappenda), serta implementasi Smart Depo di PT. Contindo Raya Padang.
 - **Client (`#/client`)**: Direktori 7 klien institusi dengan logo resmi (Bank of China Limited Hong Kong, Bank Kalteng, Bank Sulselbar Konvensional & Syariah, Bank Bengkulu, Bank Ina Perdana, dan PT. Contindo Raya Padang).
-- **Contact (`#/contact`)**: Alamat Kantor Pusat (Grand Slipi Tower Lt. 42 Unit G-H, Palmerah, Jakarta Barat), telepon `(021) 29222999`, email `support@nesyerlintasteknologi.com`, dan formulir konsultasi tervalidasi yang kompatibel penuh dengan static hosting.
+- **Contact (`#/contact`)**: Alamat Kantor Pusat (Grand Slipi Tower Lt. 42 Unit G-H, Palmerah, Jakarta Barat), telepon `(021) 29222999`, email `support@nesyerlintasteknologi.com`, dan formulir konsultasi tervalidasi dengan pengiriman langsung via Gmail Web.
+- **Karier (`#/career`, akses melalui Footer)**: Halaman rekrutmen dinamis yang membaca daftar lowongan dari file `public/careers.json`.
+
+## Cara Mengubah Status Rekrutmen (`public/careers.json`)
+1. Buka file `public/careers.json` langsung di repository GitHub Anda lalu klik tombol **Edit**.
+2. Ubah nilai `"status"` pada posisi terkait menjadi `"open"` (dibuka) atau `"closed"` (ditutup), atau tambahkan blok posisi baru di dalam array `"positions"`.
+3. Perbarui tanggal `"updatedAt"` lalu klik **Commit changes**. GitHub Actions akan otomatis menayangkan pembaruan dalam 1-2 menit.
 
 ## Kesiapan Hosting GitHub Pages
 1. **Relative Asset Paths (`base: './'`)** di `vite.config.ts` sehingga semua berkas JS, CSS, dan gambar termuat normal baik di `https://<username>.github.io/<nama-repo>/` maupun custom domain (`nesyerlintasteknologi.com`).

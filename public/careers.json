@@ -1,0 +1,57 @@
+{
+  "updatedAt": "2026-11-19",
+  "applicationEmail": "support@nesyerlintasteknologi.com",
+  "talentPoolNote": "Belum menemukan posisi yang sesuai saat ini? Anda tetap dapat mengirimkan CV terbaru agar masuk dalam daftar kandidat kami untuk kebutuhan proyek mendatang.",
+  "positions": [
+    {
+      "id": "l1-support-engineer-monitoring",
+      "title": "L1 Support Engineer & Monitoring",
+      "department": "Operasional & Monitoring IT",
+      "location": "Jakarta Barat (Onsite / Shift)",
+      "employmentType": "Full-time",
+      "experience": "Fresh Graduate / Minimal 1 tahun",
+      "status": "open",
+      "postedAt": "2026-11-19",
+      "summary": "Bertanggung jawab memantau stabilitas aplikasi, layanan gateway perbankan, serta infrastruktur server IT secara berkelanjutan, sekaligus menjadi garda terdepan dalam penanganan insiden tingkat pertama (Level 1).",
+      "responsibilities": [
+        "Melakukan pemantauan harian terhadap ketersediaan aplikasi, server, database, serta koneksi layanan gateway perbankan (RTGS, SKN-NG, API BI-FAST, dan Middleware).",
+        "Menangani laporan gangguan tingkat pertama (L1), memeriksa log aplikasi dan dashboard monitoring, serta menjalankan langkah pemulihan awal sesuai prosedur (SOP).",
+        "Melakukan eskalasi terstruktur lengkap dengan detail log dan kronologi ke tim L2 Engineer atau Developer apabila ditemukan kendala tingkat lanjut.",
+        "Mencatat setiap tiket insiden, tindak lanjut, serta menyusun laporan operasional harian dan pemenuhan SLA secara rapi.",
+        "Berkoordinasi dengan tim IT klien secara responsif dan profesional selama jam operasional maupun jadwal pemeliharaan sistem."
+      ],
+      "qualifications": [
+        "Pendidikan minimal SMK jurusan RPL, TKJ, SIJA, atau jurusan serupa di bidang teknologi informasi.",
+        "Memahami dasar administrasi Linux/Windows Server, jaringan TCP/IP, serta kueri SQL dasar.",
+        "Terbiasa membaca log aplikasi atau mengenal alat monitoring infrastruktur dan aplikasi (seperti Grafana, Zabbix, Prometheus, atau sejenisnya).",
+        "Teliti, sigap dalam menganalisis gangguan awal, dan memiliki komunikasi yang jelas.",
+        "Bersedia bekerja dengan sistem shift dan mengikuti jadwal piket operasional sesuai kebutuhan layanan."
+      ]
+    },
+    {
+      "id": "junior-developer-java-dotnet",
+      "title": "Junior Developer Java & .NET",
+      "department": "Software Engineering",
+      "location": "Jakarta Barat (Onsite / Hybrid)",
+      "employmentType": "Full-time",
+      "experience": "Fresh Graduate / Minimal 1 tahun",
+      "status": "open",
+      "postedAt": "2026-11-19",
+      "summary": "Merancang, mengembangkan, dan memelihara layanan middleware, gateway perbankan, API terintegrasi, serta aplikasi enterprise yang andal menggunakan ekosistem Java dan .NET.",
+      "responsibilities": [
+        "Mengembangkan dan memelihara layanan backend, middleware integrasi, serta aplikasi web dan enterprise menggunakan Java (Spring Boot) dan/atau .NET (C#, ASP.NET Core).",
+        "Membangun integrasi antar-sistem berbasis REST API (JSON), SOAP/XML, maupun format pesan transaksi perbankan seperti ISO 8583 dan ISO 20022.",
+        "Merancang struktur database, mengoptimalkan performa kueri, serta menjaga standar keamanan pertukaran data di lingkungan perbankan dan korporasi.",
+        "Melaksanakan pengujian unit, uji integrasi bersama analis bisnis dan tim klien (SIT/UAT), hingga pendampingan saat implementasi ke produksi.",
+        "Menyusun dokumentasi teknis yang rapi serta melakukan troubleshooting dan penyempurnaan pada aplikasi yang telah beroperasi."
+      ],
+      "qualifications": [
+        "Pendidikan minimal SMK jurusan RPL, TKJ, SIJA, atau jurusan serupa di bidang teknologi informasi.",
+        "Memahami dasar pemrograman Java (Spring/Spring Boot) dan/atau C# (.NET Core / .NET Framework), serta terbuka bagi lulusan baru yang memiliki proyek/portofolio pribadi.",
+        "Memahami konsep pemrograman berorientasi objek (OOP), dasar REST API, Git, serta database relasional (SQL Server, PostgreSQL, Oracle, atau MySQL).",
+        "Nilai tambah apabila mengenal sistem perbankan, integrasi API/middleware, atau format pesan ISO 8583.",
+        "Mau terus belajar, teliti, dan mampu berkolaborasi bersama analis bisnis maupun tim implementasi di lapangan."
+      ]
+    }
+  ]
+}
